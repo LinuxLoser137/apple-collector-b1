@@ -1,13 +1,4 @@
 /**
- * <-- Creates what what happens when the "apple" is overlapped by the "collector".
- * 
- * <-- Score increases by 1 every time "Collector" overlaps "apple"
- */
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (player3, food) {
-    food.destroy(effects.disintegrate, 200)
-    info.changeScoreBy(1)
-})
-/**
  * To Do List:
  * 
  * 1) Set Background (Scene)
@@ -41,21 +32,22 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (player3, food) {
 /**
  * <--Starts your score at zero
  */
-let apple: Sprite = null
-// Apple Collector - Beginner 1
-scene.setBackgroundColor(7)
-let player2 = sprites.create(assets.image`collector`, SpriteKind.Player)
-controller.moveSprite(player2, 100, 100)
-player2.setFlag(SpriteFlag.StayInScreen, true)
-info.setScore(0)
 /**
  * <-- Don't forget to name your asset "apple" (it can be named at the bottom of the screen where you created your sprite.)
  */
 /**
  * <-- Spawns the apples in random places
  */
+/**
+ * <-- Controls what happens when the apple is caught.
+ */
+// <-- Creates what what happens when the "apple" is overlapped by the "collector".
+// 
+// <-- Score increases by 1 every time "Collector" overlaps "apple"
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (player3, food) {
+	
+})
 // Spawn apples every 1.5 seconds (NO custom function used)
 game.onUpdateInterval(1500, function () {
-    apple = sprites.create(assets.image`apple`, SpriteKind.Food)
-    apple.setPosition(randint(10, 150), randint(10, 110))
+	
 })
