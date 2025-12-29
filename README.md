@@ -19,7 +19,7 @@ scene.setBackgroundColor(7)
 let player2 = sprites.create(assets.image`collector`, SpriteKind.Player)
 controller.moveSprite(player2, 100, 100)
 ```
-//Add controls to your game
+Add controls to your game.
 ```blocks
 scene.setBackgroundColor(7)
 let player2 = sprites.create(assets.image`collector`, SpriteKind.Player)
