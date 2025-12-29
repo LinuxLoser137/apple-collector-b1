@@ -1,5 +1,5 @@
 {
-    "name": "Apple Collector-B1",
+    "name": "Apple Collector-B1 - Copy",
     "description": "",
     "dependencies": {
         "device": "*"
@@ -10,7 +10,8 @@
         "README.md",
         "assets.json",
         "images.g.jres",
-        "images.g.ts"
+        "images.g.ts",
+        "apple-collector.md"
     ],
     "testFiles": [
         "test.ts"
@@ -22,5 +23,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
