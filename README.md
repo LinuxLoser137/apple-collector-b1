@@ -1,4 +1,4 @@
- # Apple collector
+# Apple collector
 
 ## Beginner Game 1
 
@@ -30,7 +30,7 @@ controller.moveSprite(player2, 100, 100)
 player2.setFlag(SpriteFlag.StayInScreen, true)
 ```
 ## Step 6
-Create a sprite called apple. ``||Sprite:create(assets.image`collector`, SpriteKind.Food)||``
+Create a sprite called apple. ``||sprites:create(assets.image`collector`, SpriteKind.Food)||``
 ```blocks
 let apple = sprites.create(assets.image`collector`, SpriteKind.Food)
 scene.setBackgroundColor(7)
@@ -49,7 +49,9 @@ player2.setFlag(SpriteFlag.StayInScreen, true)
 info.setScore(0)
 ```
 ## Step 8
-Set blocks to destroy food and increase the score ``||destroy food with disintegrate effect for 200 ms||`` and ``||changeScoreBy(1)||``
+Set blocks to destroy food and increase the score ``||sprites:onOverlap(SpriteKind.Player, SpriteKind.Food)||``
+``||sprites:destroy(effects.disintegrate, 200)||``
+``||info:changeScoreBy(1)||``
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (player3, food) {
     food.destroy(effects.disintegrate, 200)
@@ -57,8 +59,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (player3, food) {
 })
 ```
 ## Step 9
-Set an interval function. The apples need to regenerate and appear in a random position ``||Sprites:create(assets.image`apple`, SpriteKind.Food)||`` and ``||setPosition(randint(10, 150), randint(10, 110))
-})||``
+Set an interval function. The apples need to regenerate and appear in a random position ``||game:onUpdateInterval(1500)||``
+``||sprites:create(assets.image`apple`, SpriteKind.Food)||``
+``||sprites:setPosition(randint(10, 150), randint(10, 110))||``
+})
 ```blocks
 game.onUpdateInterval(1500, function () {
     let apple = sprites.create(assets.image`apple`, SpriteKind.Food)
