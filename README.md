@@ -1,7 +1,7 @@
 # Apple collector
 
 ## Beginner Game 1 @unplugged
-
+This is a game for beginners 
 
 ## Step 2
 Add a background ``||scene:set background color||``
