@@ -1,6 +1,6 @@
 # Apple collector
 
-## Beginner Game 1 @unplugged
+## Introduction @unplugged
 This is a game for beginners 
 
 ## Step 2
