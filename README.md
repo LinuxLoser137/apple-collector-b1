@@ -1,6 +1,6 @@
 # Apple collector
 
-## Beginner Game 1
+## Beginner Game 1 @unplugged
 
 
 ## Step 2
